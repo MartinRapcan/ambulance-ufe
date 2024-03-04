@@ -146,7 +146,7 @@ export class RapidAmbulanceWlEditor {
 
         <md-divider></md-divider>
         <div class="actions">
-          <md-filled-tonal-button id="delete" disabled={!this.entry || this.entry?.id === '@new'}>
+          <md-filled-tonal-button id="delete" disabled={!this.entry || this.entry?.id === '@new'} onClick={() => this.deleteEntry()}>
             <md-icon slot="icon">delete</md-icon>
             Zmazať
           </md-filled-tonal-button>
