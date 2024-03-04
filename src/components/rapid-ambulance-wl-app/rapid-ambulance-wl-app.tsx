@@ -62,7 +62,11 @@ export class RapidAmbulanceWlApp {
             oneditor-closed={() => navigate('./list')}
           ></rapid-ambulance-wl-editor>
         ) : (
-          <rapid-ambulance-wl-list ambulance-id={this.ambulanceId} api-base={this.apiBase}></rapid-ambulance-wl-list>
+          <rapid-ambulance-wl-list
+            ambulance-id={this.ambulanceId}
+            api-base={this.apiBase}
+            onentry-clicked={(ev: CustomEvent<string>) => navigate('./entry/' + ev.detail)}
+          ></rapid-ambulance-wl-list>
         )}
       </Host>
     );
