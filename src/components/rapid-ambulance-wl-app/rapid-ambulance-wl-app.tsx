@@ -55,7 +55,12 @@ export class RapidAmbulanceWlApp {
     return (
       <Host>
         {element === 'editor' ? (
-          <rapid-ambulance-wl-editor entry-id={entryId} oneditor-closed={() => navigate('./list')}></rapid-ambulance-wl-editor>
+          <rapid-ambulance-wl-editor
+            entry-id={entryId}
+            ambulance-id={this.ambulanceId}
+            api-base={this.apiBase}
+            oneditor-closed={() => navigate('./list')}
+          ></rapid-ambulance-wl-editor>
         ) : (
           <rapid-ambulance-wl-list ambulance-id={this.ambulanceId} api-base={this.apiBase}></rapid-ambulance-wl-list>
         )}
